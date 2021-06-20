@@ -1,0 +1,18 @@
+<%- include('header'); -%>
+
+<div class="card">
+    <h5 class="card-header">Home</h5>
+    <div class="card-body">
+      <p class="card-text">Lorem Ipsum is simplyorem Ipsum is simply dummy text of the prorem Ipsum is simply dummy text of the pr dummy text of the printing ing versions of Lorem Ipsum.</p>
+    </div>
+  </div>
+
+ <% posts.forEach(ele=>{ %>
+  <div class="card">
+    <h5 class="card-header"><%= ele.title %></h5>
+    <div class="card-body">
+      <p class="card-text"><%= ele.content.substring(0,100) %> <a href="posts/<%=ele.title%>" class="btn btn-primary">Read more..</a></p>
+    </div>
+  </div>
+ <% }) %>
+ <%- include('footer'); -%>
